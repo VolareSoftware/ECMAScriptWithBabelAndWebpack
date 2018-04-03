@@ -1,4 +1,13 @@
-﻿<h2>About</h2>
-<h3>This is the about page.</h3>
+﻿@{
+    ViewBag.Title = "About";
+}
 
-<p>Use this area to provide additional information.</p>
+<h2>@ViewBag.Title</h2>
+<p>This is the about page.</p>
+
+<h1 id="setInCode"></h1>
+
+@section scripts
+{
+    <script src="/dist/about.js"></script>
+}

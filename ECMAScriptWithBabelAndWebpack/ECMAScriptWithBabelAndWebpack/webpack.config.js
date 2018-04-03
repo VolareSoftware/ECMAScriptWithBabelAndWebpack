@@ -7,8 +7,7 @@ module.exports = env => {
         devtool: isRelease ? "source-map" : "cheap-module-source-map",
         entry: {
             index: "index.es6",
-            about: "about.js",
-            contact: "contact.js"
+            about: "about.js"
         },
         output: {
             filename: "[name].js",

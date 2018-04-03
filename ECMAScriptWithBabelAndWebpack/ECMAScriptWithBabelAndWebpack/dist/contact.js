@@ -78,7 +78,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-﻿
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\joe\\Dropbox\\My Projects\\Volare\\ECMAScriptWithBabelAndWebpack\\ECMAScriptWithBabelAndWebpack\\ECMAScriptWithBabelAndWebpack\\Scripts\\contact.js'");
 
 /***/ })
 
