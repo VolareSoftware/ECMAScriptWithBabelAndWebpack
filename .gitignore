@@ -1,1 +1,9 @@
-node_modules
+*.suo
+*.user
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+packages/
+node_modules/
+.vs/
