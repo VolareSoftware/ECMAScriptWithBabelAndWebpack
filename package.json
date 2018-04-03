@@ -1,0 +1,22 @@
+{
+  "name": "ECMAScriptWithBabelAndWebpack",
+  "description": "Sample project for using ECMAScript and Babel with webpack.",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VolareSystems/ECMAScriptWithBabelAndWebpack"
+  },
+  "author": "Volare Systems, Inc.",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --colors --watch",
+    "build:release": "webpack --colors --env.configuration RELEASE"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13"
+  }
+}
