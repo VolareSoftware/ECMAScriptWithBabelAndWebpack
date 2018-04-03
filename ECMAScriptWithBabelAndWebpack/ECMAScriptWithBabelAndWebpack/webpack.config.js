@@ -1,9 +1,8 @@
 const path = require("path");
 
 module.exports = env => {
-    const fileNameFormat = "[name]";
     const isRelease = env === "RELEASE";
-    const config = {
+    return {
         mode: isRelease ? "production" : "development",
         devtool: isRelease ? "source-map" : "cheap-module-source-map",
         entry: {
@@ -12,18 +11,13 @@ module.exports = env => {
             contact: "contact.js"
         },
         output: {
-            filename: fileNameFormat + ".js",
+            filename: "[name].js",
             path: path.resolve(__dirname, "dist"),
             publicPath: "/dist"
         },
         resolve: {
-            extensions: [
-                ".js", ".es6"
-            ],
-            modules: [
-                path.resolve(__dirname, "Scripts"),
-                "node_modules"
-            ]
+            extensions: [".js", ".es6"],
+            modules: ["Scripts", "node_modules"]
         },
         module: {
             rules: [
@@ -33,15 +27,11 @@ module.exports = env => {
                     use: {
                         loader: "babel-loader",
                         options: {
-                            presets: ["env"],
-                            babelrc: false,
-                            cacheDirectory: true
+                            presets: ["env"]
                         }
                     }
                 }
             ]
         }
     };
-
-    return config;
 };
